@@ -37,7 +37,7 @@ login_header = {
 
 }
 login_url = ' https://api.xixunyun.com//login/api?from=app&version=4.9.9&platform=android&entrance_year=0&graduate_year=0'
-request = requests.post(url=login_url, headers=login_header, data=data, verify=False)
+request = requests.post(url=login_url, headers=login_header, data=data)
 login_data = json.loads(request.text)  # 登陆成功后返回的信息
 token = login_data['data']['token']
 time.sleep(1)
@@ -53,7 +53,7 @@ sign_data = {'address': address_detail,  # 签到地址
              'remark': '0',
 
              }
-sign_request = requests.post(url=sign_url, data=sign_data, headers=login_header, verify=False)
+sign_request = requests.post(url=sign_url, data=sign_data, headers=login_header)
 sign = json.loads(sign_request.text)
 
 
@@ -63,5 +63,5 @@ headers={
     'Content-Type': 'application/json'
 }
 url='http://pushplus.hxtrip.com/send'
-data={'token':token1, 'title':'习讯云签到通知', 'content':sign, 'template':'html'}
+data={'token':TOKEN1, 'title':'习讯云签到通知', 'content':sign, 'template':'html'}
 res=requests.post(headers=headers, url=url, data=json.dumps(data), timeout=10)
