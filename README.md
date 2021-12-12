@@ -1,5 +1,6 @@
-# ##习讯云自动签到##111
-<code>2021年9月22日 22:00更新</code><br>
+# ##习讯云自动签到
+<code>2021年12月12日 18:00更新</code><br>
+将原有Server酱推送移除，改为了push+推送，同是将推送内容由原来的aciss码改成了比较方便阅读的文字
 <code>1.新增详细地址(精确到门牌号)功能</code><br>
 
 为了让同学们更加认真、更加专注听课，而不去用手机签到花费大量时间、耗费大量精力，请自行合理使用！请点击下方View all of README.md了解更多。
@@ -48,4 +49,4 @@ value: <code>Server酱接口号</code><br>  (用于微信Server酱接收签到�
 
 最后在你这个 Fork 的仓库内随便改点什么（比如给 README 文件删掉或者增加几个字符）提交一下手动触发一次 GitHub Actions 就可以了 （重要！！！第一次Fork 的仓库上 GitHub Actions 的定时任务不会自动执行，必须要手动触发一次后才能正常工作） 。
 
-### 其他项目链接请访问：<code>http://1.15.229.3/</code><br> 
+fork源来自于：https://github.com/LinMingGG/xxy
