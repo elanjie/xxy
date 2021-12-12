@@ -12,7 +12,6 @@ sign_gps = os.environ["SIGN_GPS"]  # 签到坐标（注意小数点取后6位）
 longitude = sign_gps.split(",")[0]  # 经度
 latitude = sign_gps.split(",")[1]  # 纬度
 token1 = os.environ["TOKEN1"]
-# SCKEY = os.environ["SCKEY"]
 address = os.environ["ADDRESS_NAME"]
 address_detail = os.environ["ADDRESS_DETAIL"]
 
@@ -57,11 +56,11 @@ sign_request = requests.post(url=sign_url, data=sign_data, headers=login_header)
 sign = json.loads(sign_request.text)
 
 
-
 headers={
     "User-Agent":"Mozilla/5.0 (Linux; Android 9; SM-A102U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.93 Mobile Safari/537.36",
     'Content-Type': 'application/json'
 }
 url='http://pushplus.hxtrip.com/send'
-data={'token':TOKEN1, 'title':'习讯云签到通知', 'content':sign, 'template':'html'}
+data={'token':token1, 'title':'习讯云签到通知', 'content':sign, 'template':'html'}
 res=requests.post(headers=headers, url=url, data=json.dumps(data), timeout=10)
+print
