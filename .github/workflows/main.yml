@@ -33,7 +33,7 @@ jobs:
           USER: ${{ secrets.USER }}
           SIGN_GPS:  ${{ secrets.SIGN_GPS }}
           ADDRESS_NAME:  ${{ secrets.ADDRESS_NAME }} 
-          SCKEY: ${{ secrets.SCKEY }} 
           EMAIL: ${{ secrets.EMAIL }} 
           ADDRESS_DETAIL:  ${{ secrets.ADDRESS_DETAIL }} 
+          TOKEN1: ${{secrets.TOKEN1}}
 
