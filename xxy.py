@@ -61,6 +61,6 @@ headers={
     'Content-Type': 'application/json'
 }
 url='http://pushplus.hxtrip.com/send'
-data={'token':token1, 'title':'习讯云签到通知', 'content':sign, 'template':'html'}
+data={'token':token1, 'title':'习讯云签到通知', 'content':sign, 'template':'html', 'topic':'1'}
 res=requests.post(headers=headers, url=url, data=json.dumps(data), timeout=10)
 print
